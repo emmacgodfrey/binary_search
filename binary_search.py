@@ -39,7 +39,7 @@ def find_smallest_positive(xs):
         if left == right:
             return left
 
-        mid = (left + right)//2
+        mid = (left + right) // 2
 
         if xs[mid] == 0:
             return mid + 1
@@ -104,7 +104,7 @@ def find_lowest(xs, x):
                 return left
             else:
                 return None
-        mid = (left + right)//2
+        mid = (left + right) // 2
         if xs[mid] > x:
             left = mid + 1
         if xs[mid] < x:
@@ -198,9 +198,9 @@ def argmin(f, lo, hi, epsilon=1e-3):
 
     else:
         # 1/4 mark is m1
-        m1 = lo + (hi - lo)/3
+        m1 = lo + (hi - lo) / 3
         # 3/4 mark is m2
-        m2 = lo + ((hi - lo)/3)*2
+        m2 = lo + ((hi - lo) / 3) * 2
         if f(m1) <= f(m2):
             hi = m2
             return argmin(f, lo, hi, epsilon)
@@ -231,7 +231,7 @@ def find_boundaries(f, lo=-1, hi=1):
     else:
         you're done; return lo,hi
     '''
-    mid = (lo + hi)/2
+    mid = (lo + hi) / 2
     if f(lo) < f(mid):
         lo *= 2
         return find_boundaries(f, lo, hi)
