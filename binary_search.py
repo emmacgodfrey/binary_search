@@ -133,7 +133,7 @@ def find_highest(xs, x):
                 return left
             else:
                 return None
-        mid = (left + right)//2
+        mid = (left + right) // 2
         if xs[mid] > x:
             left = mid + 1
         if xs[mid] < x:
